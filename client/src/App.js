@@ -7,6 +7,7 @@ import "./styles.scss";
 function App() {
   return (
     <Router>
+      <h1>Hi</h1>
       <div className="App">
         <Route exact path="/" component={Login} />
         {/* 
