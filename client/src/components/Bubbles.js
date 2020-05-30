@@ -16,6 +16,7 @@ const Bubbles = ({ colors }) => {
     <div className="bubble-wrap">
       <p>bubbles</p>
       <Svg width={400} height={400}>
+        
         <Pack
           data={{
             children: bubbleData
@@ -26,6 +27,7 @@ const Bubbles = ({ colors }) => {
           nodeEnter={d => ({ ...d, r: 0 })}
           animate
         >
+
           {nodes =>
             nodes
               .map(({ x, y, r, key }, i) => {
@@ -35,7 +37,7 @@ const Bubbles = ({ colors }) => {
                       key={key}
                       cx={x}
                       cy={y}
-                      r={r}
+                      r={(r)*2}
                       fill={colors[i].code.hex}
                     />
                   );
